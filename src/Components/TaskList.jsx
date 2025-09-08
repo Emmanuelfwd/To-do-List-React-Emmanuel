@@ -1,6 +1,18 @@
 import React from 'react'
 import { getTareas, agregarTarea, eliminarTarea, actualizarTarea } from '../Services/Services';
 
+useEffect(() => {
+  const cargarTareas = async () => {
+    try {
+      const lista = await getTareas()
+      setTareas(lista)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  cargarTareas()
+}, [])
 
 function TaskList() {
   return (
