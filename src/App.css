@@ -5,6 +5,26 @@
   text-align: center;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: #ddd;
+  padding: 10px;
+}
+
+h1, h2 {
+  margin: 10px;
+}
+
+input, button {
+  margin: 5px;
+  padding: 5px;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

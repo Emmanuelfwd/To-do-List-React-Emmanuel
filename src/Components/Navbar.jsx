@@ -7,7 +7,7 @@ function Navbar() {
       <h2>Todo App</h2>
       <nav>
         <Link to="/">Inicio</Link> | 
-        <Link to="/tareas"> Tareas</Link>
+        <Link to="/Todo"> Tareas</Link>
       </nav>
     </div>
   )
