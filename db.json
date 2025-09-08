@@ -1,9 +1,3 @@
 {
-  "tareas": [
-    {
-      "id": "f831",
-      "titulo": "1",
-      "completada": false
-    }
-  ]
+  "tareas": []
 }
