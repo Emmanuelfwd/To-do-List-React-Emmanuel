@@ -1,4 +1,6 @@
 import React from 'react'
+import { getTareas, agregarTarea, eliminarTarea, actualizarTarea } from '../Services/Services';
+
 
 function TaskList() {
   return (
