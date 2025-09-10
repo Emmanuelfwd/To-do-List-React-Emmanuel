@@ -1,5 +1,8 @@
+// src/components/TaskList.jsx
+
 import React, { useState, useEffect } from 'react'
 import { getTareas, agregarTarea, eliminarTarea, actualizarTarea } from '../Services/Services'
+import Caja from './Caja'
 
 function TaskList() {
   const [tareas, setTareas] = useState([])
@@ -59,23 +62,11 @@ function TaskList() {
         <button onClick={agregarNuevaTarea}>Agregar</button>
       </div>
 
-      <div>
-        <p>Tareas Completadas: {tareas.filter(t => t.completada).length}</p>
-      </div>
-
-      <div>
-        {tareas.map(t => (
-          <div key={t.id}>
-            <input
-              type="checkbox"
-              checked={t.completada}
-              onChange={() => marcarCompletada(t)}
-            />
-            <span>{t.titulo}</span>
-            <button onClick={() => borrarTarea(t.id)}>Eliminar</button>
-          </div>
-        ))}
-      </div>
+      <Caja
+        tareas={tareas}
+        marcarCompletada={marcarCompletada}
+        borrarTarea={borrarTarea}
+      />
     </div>
   )
 }

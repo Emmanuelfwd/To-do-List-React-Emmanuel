@@ -8,6 +8,7 @@ function Todo() {
       <Navbar />
       <h1>Lista de Tareas</h1>
       <TaskList />
+      
     </div>
   )
 }
