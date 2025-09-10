@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getTareas, agregarTarea, eliminarTarea, actualizarTarea } from '../Services/Services'
 import Caja from './Caja'
+import {motion}  from "motion/react";
 
 function TaskList() {
   const [tareas, setTareas] = useState([])
@@ -9,6 +10,8 @@ function TaskList() {
   useEffect(() => {
     cargarTareas()
   }, [])
+
+  
 
   const cargarTareas = async () => {
     try {
@@ -50,14 +53,23 @@ function TaskList() {
 
   return (
     <div>
+
       <div>
         <input
           type="text"
           placeholder="Ingresar tarea"
           value={nuevaTarea}
           onChange={e => setNuevaTarea(e.target.value)}
+          onKeyDown={(e) => { if(e.key === "Enter") agregarNuevaTarea() }}
         />
-        <button onClick={agregarNuevaTarea}>Agregar</button>
+        <motion.button onClick={agregarNuevaTarea}
+         whileHover={{ scale: 1.1 }} 
+        whileTap={{ scale: 0.95 }} 
+        transition={{ type: "spring", stiffness: 300 }} >
+          Agregar
+          </motion.button>
+          
+        
       </div>
 
       <Caja
