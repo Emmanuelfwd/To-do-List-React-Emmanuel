@@ -1,21 +1,6 @@
 {
   "tareas": [
     {
-      "id": "eb7b",
-      "titulo": "3",
-      "completada": false
-    },
-    {
-      "id": "53c2",
-      "titulo": "1",
-      "completada": false
-    },
-    {
-      "id": "1943",
-      "titulo": "2",
-      "completada": false
-    },
-    {
       "id": "9ef2",
       "titulo": "4",
       "completada": false
@@ -23,11 +8,6 @@
     {
       "id": "06a3",
       "titulo": "4",
-      "completada": false
-    },
-    {
-      "id": "b219",
-      "titulo": "0}",
       "completada": false
     }
   ]
