@@ -1,5 +1,3 @@
-// src/components/Caja.jsx
-
 import React from 'react'
 
 function Caja({ tareas, marcarCompletada, borrarTarea }) {
@@ -25,5 +23,5 @@ function Caja({ tareas, marcarCompletada, borrarTarea }) {
     </div>
   )
 }
-    
+
 export default Caja

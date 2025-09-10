@@ -1,5 +1,3 @@
-// src/components/TaskList.jsx
-
 import React, { useState, useEffect } from 'react'
 import { getTareas, agregarTarea, eliminarTarea, actualizarTarea } from '../Services/Services'
 import Caja from './Caja'
