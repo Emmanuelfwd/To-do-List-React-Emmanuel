@@ -54,7 +54,7 @@ function Registro() {
       </form>
 
       <p className="switch-link">
-        ¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>
+        ¿Ya tienes cuenta? <Link to="/Login">Inicia sesión</Link>
       </p>
     </motion.div>
   )

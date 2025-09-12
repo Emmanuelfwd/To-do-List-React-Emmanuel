@@ -27,9 +27,18 @@ const transition = {
   const guardarEdicion = async (tarea) => {
     try {
       await actualizarTarea({ ...tarea, titulo: tituloEditado })
-      setEditandoId(null)
-      setTituloEditado("")
-      await cargarTareas()
+
+      if (tituloEditado != "") {
+        setEditandoId(null)
+        setTituloEditado("")
+        await cargarTareas()
+        
+      }
+      else{
+        alert("No se puede dejar en blanco")
+        return
+      }
+      
     } catch (error) {
       console.error("Error al guardar edición:", error)
     }
@@ -97,6 +106,8 @@ const transition = {
             >
               Eliminar
             </motion.button>
+
+            
           </motion.div>
         ))}
       </div>

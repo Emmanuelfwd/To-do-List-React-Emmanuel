@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'motion/react'
+import {Link} from 'react-router-dom'
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -17,6 +18,8 @@ function Login() {
       setError('Correo o contraseña incorrectos')
     }
   }
+
+
 
   return (
     <motion.div
@@ -47,6 +50,9 @@ function Login() {
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
         <button type="submit">Entrar</button>
+        <br />
+        <hr />
+        <Link to="/Registro"> Registrate aquí!!!</Link>
       </form>
     </motion.div>
   )

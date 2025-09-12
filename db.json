@@ -1,15 +1,9 @@
 {
   "tareas": [
     {
-      "id": "be87",
-      "titulo": "2",
-      "completada": true,
-      "fecha": "2025-09-11"
-    },
-    {
       "id": "6f20",
-      "titulo": "3",
-      "completada": true,
+      "titulo": "",
+      "completada": false,
       "fecha": "2025-09-11"
     }
   ]
