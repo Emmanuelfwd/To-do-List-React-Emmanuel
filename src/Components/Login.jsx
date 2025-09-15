@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { motion } from 'motion/react'
-import {Link} from 'react-router-dom'
+import { validarLogin } from '../Services/Services'
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -9,17 +9,16 @@ function Login() {
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
-  const handleLogin = (e) => {
-    e.preventDefault()
+  const controladorLogin = async () => {
+    const valido = await validarLogin(email, password)
 
-    if (email === 'test@correo.com' && password === '123456') {
-      navigate('/home') 
+    if (valido) {
+      sessionStorage.setItem('usuario', email)
+      navigate('/home')
     } else {
       setError('Correo o contraseña incorrectos')
     }
   }
-
-
 
   return (
     <motion.div
@@ -29,31 +28,29 @@ function Login() {
       transition={{ duration: 0.5 }}
     >
       <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Email</label>
-          <input 
-            type="email" 
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required 
-          />
-        </div>
-        <div>
-          <label>Contraseña</label>
-          <input 
-            type="password" 
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required 
-          />
-        </div>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit">Entrar</button>
-        <br />
-        <hr />
-        <Link to="/Registro"> Registrate aquí!!!</Link>
-      </form>
+      <div>
+        <label>Email</label>
+        <input 
+          type="email" 
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required 
+        />
+      </div>
+      <div>
+        <label>Contraseña</label>
+        <input 
+          type="password" 
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required 
+        />
+      </div>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <button onClick={controladorLogin}>Entrar</button>
+      <br />
+      <hr />
+      <Link to="/registro">¿No tienes cuenta? Regístrate aquí</Link>
     </motion.div>
   )
 }

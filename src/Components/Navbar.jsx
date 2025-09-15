@@ -25,7 +25,7 @@ function Navbar() {
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
       >
-        <Link to="/">Inicio</Link> | 
+        <Link to="/" onClick={()=> sessionStorage.clear()}>LogOut</Link> | 
         <Link to="/Todo"> Tareas</Link>
       </motion.nav>
     </motion.div>
