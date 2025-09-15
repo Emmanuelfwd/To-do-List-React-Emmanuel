@@ -9,6 +9,11 @@
       "id": "1fe2",
       "email": "enmanuel2712@hotmail.es",
       "password": "2"
+    },
+    {
+      "id": "2050",
+      "email": "ritoruiz@gmail.com",
+      "password": "2"
     }
   ],
   "tareas": [
@@ -18,6 +23,13 @@
       "completada": false,
       "fecha": "2025-09-15",
       "usuarioEmail": "ruizemmanuel78@gmail.com"
+    },
+    {
+      "id": "087a",
+      "titulo": "3",
+      "completada": false,
+      "fecha": "2025-09-15",
+      "usuarioEmail": "ritoruiz@gmail.com"
     }
   ]
 }
