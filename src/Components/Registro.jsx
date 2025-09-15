@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { registrarUsuario, getUsuarios } from '../Services/Services'
+import {Link} from 'react-router-dom'
 
 function Registro() {
   const [email, setEmail] = useState('')
@@ -54,6 +55,9 @@ function Registro() {
       </div>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <button onClick={controladorRegistro}>Registrarse</button>
+      <br />
+      <Link to="/"> ¿Ya tienes cuenta? vuelve a Login</Link>
+      
     </motion.div>
   )
 }
