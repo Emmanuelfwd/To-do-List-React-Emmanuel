@@ -1,12 +1,33 @@
-# React + Vite
+# 📝 To-do List App - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada en **React** para gestionar tareas de manera simple. Permite registrar usuarios, iniciar sesión y crear, editar, completar y eliminar tareas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Funcionalidades
 
-## Expanding the ESLint configuration
+- Registro de usuario
+- Inicio de sesión
+- Agregado de nuevas tareas
+- Edición de tareas existentes
+- Marcado de tareas como completadas
+- Eliminación de tareas
+- Animaciones con `motion`
+- Navegación con `react-router-dom`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Tecnologías usadas
+
+- React + Vite
+- React Router DOM
+- Motion
+- JSON Server (para simular backend)
+- Fetch API
+
+## ⚙️ Instalación
+
+1. Clona este repositorio.
+2. Abre una terminal y navega a la carpeta raíz del proyecto.
+3. **Ejecuta el siguiente comando para instalar las dependencias**:
+4. Ejecutar el comando "Npm i" o el programa puede no funcionar por falta de librerías para motion
